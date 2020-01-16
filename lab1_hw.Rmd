@@ -74,9 +74,10 @@ total_week <- blackjack + roulette
 ```
 
 
-f. Should you stick to blackjack or roulette? Write a program that verifies this below.  
+f. Should you stick to blackjack or roulette? Write a program that verifies this below. 
 ```{r}
-
+if(sum(blackjack, na.rm = TRUE)>sum(roulette, na.rm = TRUE)) print("Blackjack")  else print("Roulette") #stick to Blackjack
 ```
 
 ## Push your final code to [GitHub](https://github.com/FRS417-DataScienceBiologists)
+
