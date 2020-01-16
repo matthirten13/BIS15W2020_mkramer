@@ -40,6 +40,9 @@ roulette <- c(60, 50, 120, -300, 10, NA, NA)
 ```
 
 a. Build a new vector called `days` for the days of the week. 
+```{r}
+days <- c("Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday")
+```
 
 
 We will use `days` to name the elements in the poker and roulette vectors.
