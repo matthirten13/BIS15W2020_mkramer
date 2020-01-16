@@ -24,8 +24,14 @@ prod(8/2)**2 #Example 2
 ```
 
 3. Make a new object `pi` as 3.14159265359.  
+```{r}
+pi <- 3.14159265359
+```
 
 4. Is `pi` an integer or numeric? Why? Show your code.  
+```{r}
+class(pi) #Returns numeric, so pi is numeric
+```
 
 5. You have decided to use your new analytical powers in R to become a professional gambler. Here are your winnings and losses this week. Note that you don't gamble on the weekends!  
 ```{r, eval=F, echo=T}
