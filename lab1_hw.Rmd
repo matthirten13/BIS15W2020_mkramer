@@ -52,17 +52,31 @@ names(roulette) <- days
 ```
 
 b. Calculate how much you won or lost in blackjack over the week.  
+```{r}
+sum(blackjack, na.rm = TRUE)
+```
 
 
 c. What is your interpretation of this result? What do you need to do to address the problem? Recalculate how much you won or lost in blackjack over the week.  
-
+```{r}
+sum(blackjack, na.rm = TRUE) #My interpretation is that I won 310 in blackjack over the course of the week. I probably need to go less often as my gambling problem is pretty bad if I'm going 5x a week.
+```
 
 d. Calculate how much you won or lost in roulette over the week.  
+```{r}
+sum(roulette, na.rm = TRUE)
+```
 
 
 e. Build a `total_week` vector to show how much you lost or won on each day over the week. Which days seem lucky or unlucky for you?
+```{r}
+total_week <- blackjack + roulette
+```
 
 
 f. Should you stick to blackjack or roulette? Write a program that verifies this below.  
+```{r}
+
+```
 
 ## Push your final code to [GitHub](https://github.com/FRS417-DataScienceBiologists)
