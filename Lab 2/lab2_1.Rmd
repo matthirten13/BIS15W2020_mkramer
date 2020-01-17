@@ -64,7 +64,7 @@ harry_potter_matrix
 ## Name the rows and columns
 Vectors `region` and `titles`, used for naming.
 ```{r}
-region <- c("US", "non-US")
+region <- c("US", "Non-US")
 titles <- c("Philosophers_Stone", "Chamber_of_Secrets", "Prisoner_of_Azkaban", "Goblet_of_Fire", "Order_of_the_Phoenix", "Half_Blood_Prince", "Deathly_Hallows_1", "Deathly_Hallows_2")
 ```
 
@@ -86,20 +86,28 @@ harry_potter_matrix
 ## Using a data matrix
 Once you have a data matrix, you can perform lots of different analyses. For example, you can calculate the total earnings of each movie.
 ```{r}
-global <- rowSums(harry_potter_matrix)
-global
+Global <- rowSums(harry_potter_matrix)
+Global
 ```
 
 And even add a new column to reflect this calculation. `cbind()` adds columns.
 ```{r}
-all_harry_potter_matrix <- cbind(harry_potter_matrix, global)
+all_harry_potter_matrix <- cbind(harry_potter_matrix, Global)
 all_harry_potter_matrix
 ```
 
 ## Practice
 1. What are the total earnings for each of the regions?  
+```{r}
+Total <- colSums(all_harry_potter_matrix)
+Total
+```
 
 2. Add this information to the data matrix. Hint: you are adding a row, not a column.  
+```{r}
+HPwTot <- rbind(all_harry_potter_matrix, Total)
+HPwTot
+```
 
 ## Select elements in a data matrix
 The same methods of selecting elements in a vector apply to data matrices. We use `[]`. The following selects the value in the first column, second row.
@@ -133,7 +141,9 @@ spring_8 <- c(36.80, 36.45, 33.15)
 
 1. Build a data matrix that has the springs as rows and the columns as scientists.  
 ```{r}
-
+HS <- c(spring_1, spring_2, spring_3, spring_4, spring_5, spring_6, spring_7, spring_8)
+HS_M <- matrix(HS, nrow = 8, byrow = T)
+HS_M
 ```
 
 
@@ -145,18 +155,21 @@ springs <- c("Bluebell Spring", "Opal Spring", "Riverside Spring", "Too Hot Spri
 
 2. Use `colnames()` and `rownames()` to name the columns and rows.  
 ```{r}
-
+colnames(HS_M) <- scientists
+rownames(HS_M) <- springs
+HS_M
 ```
 
 Calculate the mean temperature of all three springs. Notice the command `rowMeans`.
 ```{r}
-#mean_vector <- rowMeans(springs_matrix)
-#mean_vector
+Avg_T <- round(rowMeans(HS_M), digits = 2)
+Avg_T
 ```
 
 3. Add `mean_vector` as a new column.  
 ```{r}
-
+HS_MwM <- cbind(HS_M, Avg_T)
+HS_MwM
 ```
 
 

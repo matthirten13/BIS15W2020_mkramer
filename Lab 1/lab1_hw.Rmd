@@ -71,6 +71,7 @@ sum(roulette, na.rm = TRUE)
 e. Build a `total_week` vector to show how much you lost or won on each day over the week. Which days seem lucky or unlucky for you?
 ```{r}
 total_week <- blackjack + roulette
+print(total_week)
 ```
 
 
