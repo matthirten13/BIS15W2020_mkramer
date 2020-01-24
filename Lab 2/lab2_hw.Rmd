@@ -53,21 +53,49 @@ summary(sleep)
 
 
 6. Print out the first column of the data frame and then print out the first row.
+```{r}
+sleep[1, ]
+sleep[ ,1]
+```
 
 
 7. We are interested in two groups; small and large mammals. Let's define small as less than or equal to 1kg body weight and large as greater than or equal to 200kg body weight. Make two new dataframes (large and small) based on these parameters.  
+```{r}
+s_mammal <- subset(sleep, bodywt <= 1)
+s_mammal
+l_mammal <- subset(sleep, bodywt >= 200)
+l_mammal
+```
 
 
 8. What is the mean weight for both the large and small mammals?
+```{r}
+mw_l <- mean(l_mammal$bodywt)
+mw_l
+mw_s <- mean(s_mammal$bodywt)
+mw_s
+```
 
 
 9. Let's try to figure out if large mammals sleep, on average, longer than small mammals. What is the average sleep duration for large mammals as we have defined them?
+```{r}
+sleep_l <- mean(l_mammal$sleep_total)
+sleep_l
+```
 
 
 10. What is the average sleep duration for small mammals as we have defined them?
-
+```{r}
+sleep_s <- mean(s_mammal$sleep_total)
+sleep_s
+```
 
 11. Which animals are the sleepiest? Which sleep least 18 hours per day?  
+```{r}
+if (sleep_s>sleep_l) print("Small") else if (sleep_s<sleep_l) print("large") else print("Small and Large Same")
+Mega_Sleep <- subset(sleep, sleep_total >= 18, select = c(name, genus, order, sleep_total))
+Mega_Sleep
+```
 
 
 ## Push your final code to GitHub
