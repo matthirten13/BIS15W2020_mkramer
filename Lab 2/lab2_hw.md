@@ -1,6 +1,6 @@
 ---
 title: "Lab 2 Homework"
-author: "Joel Ledford"
+author: "Matt Kramer"
 date: "Winter 2020"
 output:
   html_document: 
