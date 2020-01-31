@@ -49,31 +49,73 @@ names(homerange)
 str(homerange)
 ```
 ```{r}
-
+summary(homerange)
 ```
 
 
 4. Are there NA's in your data? Show the code that you would use to verify this, please.  
+```{r}
+anyNA(homerange)
+```
 
 5. Change the class of the variables `taxon` and `order` to factors and display their levels.  
+```{r}
+homerange$taxon <- as.factor(homerange$taxon)
+levels(homerange$taxon)
+homerange$order <- as.factor(homerange$order)
+levels(homerange$order)
+```
 
 6. Make a new dataframe `deer` that is limited to the mean mass, log10 mass, family, genus, and species of deer in the database. The family for deer is cervidae. Arrange the data in descending order by log10 mass. Which is the largest deer?  
+```{r}
+select(homerange, mean.mass.g, log10.mass, family, genus, species) %>% 
+  filter(family == "cervidae") %>% 
+  arrange(desc(log10.mass))
+```
 
 7. As measured by the data, which snake species has the smallest homerange? Show all of your work, please. Look this species up online and tell me about it!  
+```{r}
+filter(homerange, taxon == "snakes") %>% 
+  arrange(desc(mean.hra.m2)) #Timber rattlensakes are found across the Eastern half of the US. They mostly feed on small mammals
+```
 
 
 8. You suspect that homerange and mass are correlated in birds. We need a ratio that facilitates exploration of this prediction. First, build a new dataframe called `hra_ratio` that is limited to genus, species, mean.mass.g, log10.mass, log10.hra. Arrange it in ascending order by mean mass in grams.  
+```{r}
+hra_ratio <- filter(homerange, taxon == "birds") %>% 
+  select(genus, species, mean.mass.g, log10.mass, log10.hra) %>% 
+  arrange(mean.mass.g)
+```
 
 
 9. Replace the existing `hra_ratio` dataframe with a new dataframe that adds a column calculating the ratio of log 10 hra to log 10 mass. Call it `hra.mass.ratio`. Arrange it in descending order by mean mass in grams.  
+```{r}
+hra.mass.ratio <- hra_ratio$log10.hra/hra_ratio$log10.mass
+hra_ratio <- cbind(hra_ratio, hra.mass.ratio)
+hra_ratio %>% 
+  arrange(desc(hra.mass.ratio))
+```
 
 
 10. What is the lowest mass for birds with a `hra.mass.ratio` greater than or equal to 4.0?
+```{r}
+hra_ratio %>% 
+  filter(hra.mass.ratio >= 4.0) %>% 
+  arrange(mean.mass.g)
+```
 
 
 11. Do a search online; what is the common name of the bird from #8 above? Place a link in your markdown file that takes us to a webpage with information on its biology.  
 
+[Canada Warbler]{https://en.wikipedia.org/wiki/Canada_warbler}
+
+
 12. What is the `hra.mass.ratio` for an ostrich? Show your work, please.  
+```{r}
+hra_ratio %>% 
+  filter(genus == "struthio", species == "camelus") %>% 
+  select(hra.mass.ratio)
+```
 
 ## Push your final code to GitHub!
 Please be sure that you have check the `keep md` file in the knit preferences.  
