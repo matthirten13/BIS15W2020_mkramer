@@ -45,7 +45,7 @@ life_history
 ```
 
 2. What are the possible problems if missing data are indicated by "-999.0" or "0"?
-
+Could be treated as a value, not NA
 
 ## For the following examples, we will use the built-in `msleep` data
 ```{r}
@@ -80,12 +80,22 @@ summary(msleep)
 
 ## Practice
 1. Load the data `import_export.csv` and store it as a new object `import_export`.
+```{r}
+import_export <- readr::read_csv("data/import_export.csv")
+```
 
 
 2. Are there NAs in the data? Evaluate this logically (true/false).
+```{r}
+is.na(import_export)
+```
 
 
 3. How many total NAs are present?
+```{r}
+import_export %>% 
+  summarize(total_na = sum(is.na(import_export)))
+```
 
 
 ## NAs in large datasets using `purr`
@@ -162,6 +172,11 @@ life_history %>%
 ```
 
 2. Reconsider the practice question from the beginning of the lab. Are there any NA's in the data? Does this seem likely? Do the mean values from the `skim()` output above make sense?  
+There is definitely NA
+```{r}
+life_history %>% 
+  summarize(total_na=sum(is.na(life_history)))
+```
 
 
 3. Replace the entries that represent NA's in the data using `na_if()`. Double check your work and compare to #2 above.
@@ -169,9 +184,19 @@ life_history %>%
 life_history2 <- 
   life_history %>% 
   na_if("-999")
+life_history2 %>% 
+  summarize(total_na=sum(is.na(life_history2)))
 ```
 
 4. In which variable are the most NAs in the data frame?
+```{r}
+life_history2 %>% 
+  purrr::map_df(~ sum(is.na(.))) %>% 
+  pivot_longer(everything(),
+    names_to= "variables",
+    values_to = "num_nas") %>% 
+  arrange(desc(num_nas))
+```
 
 
 ## `naniar`
@@ -181,6 +206,9 @@ life_history2 <-
 ```{r}
 naniar::miss_var_summary(life_history2)
 ```
+
+
+
 
 We can also use `miss_var_summary` with `group_by()`.
 ```{r}
@@ -205,7 +233,7 @@ life_history %>%
 ## Visualizing NAs
 There is another package `visdat` that can be used to visualize the proportion of different classes of data, including missing data.
 ```{r}
-#install.packages("vidat)
+install.packages("visdat")
 library(visdat)
 ```
 
