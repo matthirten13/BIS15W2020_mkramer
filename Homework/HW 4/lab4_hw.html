@@ -413,19 +413,19 @@ summary {
 <pre><code>## See spec(...) for full column specifications.</code></pre>
 <pre class="r"><code>fisheries</code></pre>
 <pre><code>## # A tibble: 17,692 x 71
-##    Country `Common name` `ISSCAAP group#` `ISSCAAP taxono~ `ASFIS species#`
+##    Country `Common name` `ISSCAAP group#` `ISSCAAP taxono&lt;U+2026&gt; `ASFIS species#`
 ##    &lt;chr&gt;   &lt;chr&gt;                    &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;           
-##  1 Albania Angelsharks,~               38 Sharks, rays, c~ 10903XXXXX      
-##  2 Albania Atlantic bon~               36 Tunas, bonitos,~ 1750100101      
-##  3 Albania Barracudas n~               37 Miscellaneous p~ 17710001XX      
-##  4 Albania Blue and red~               45 Shrimps, prawns  2280203101      
-##  5 Albania Blue whiting~               32 Cods, hakes, ha~ 1480403301      
-##  6 Albania Bluefish                    37 Miscellaneous p~ 1702021301      
-##  7 Albania Bogue                       33 Miscellaneous c~ 1703926101      
-##  8 Albania Caramote pra~               45 Shrimps, prawns  2280100117      
-##  9 Albania Catsharks, n~               38 Sharks, rays, c~ 10801003XX      
-## 10 Albania Common cuttl~               57 Squids, cuttlef~ 3210200202      
-## # ... with 17,682 more rows, and 66 more variables: `ASFIS species name` &lt;chr&gt;,
+##  1 Albania Angelsharks,&lt;U+2026&gt;               38 Sharks, rays, c&lt;U+2026&gt; 10903XXXXX      
+##  2 Albania Atlantic bon&lt;U+2026&gt;               36 Tunas, bonitos,&lt;U+2026&gt; 1750100101      
+##  3 Albania Barracudas n&lt;U+2026&gt;               37 Miscellaneous p&lt;U+2026&gt; 17710001XX      
+##  4 Albania Blue and red&lt;U+2026&gt;               45 Shrimps, prawns  2280203101      
+##  5 Albania Blue whiting&lt;U+2026&gt;               32 Cods, hakes, ha&lt;U+2026&gt; 1480403301      
+##  6 Albania Bluefish                    37 Miscellaneous p&lt;U+2026&gt; 1702021301      
+##  7 Albania Bogue                       33 Miscellaneous c&lt;U+2026&gt; 1703926101      
+##  8 Albania Caramote pra&lt;U+2026&gt;               45 Shrimps, prawns  2280100117      
+##  9 Albania Catsharks, n&lt;U+2026&gt;               38 Sharks, rays, c&lt;U+2026&gt; 10801003XX      
+## 10 Albania Common cuttl&lt;U+2026&gt;               57 Squids, cuttlef&lt;U+2026&gt; 3210200202      
+## # &lt;U+2026&gt; with 17,682 more rows, and 66 more variables: `ASFIS species name` &lt;chr&gt;,
 ## #   `FAO major fishing area` &lt;dbl&gt;, Measure &lt;chr&gt;, `1950` &lt;chr&gt;, `1951` &lt;chr&gt;,
 ## #   `1952` &lt;chr&gt;, `1953` &lt;chr&gt;, `1954` &lt;chr&gt;, `1955` &lt;chr&gt;, `1956` &lt;chr&gt;,
 ## #   `1957` &lt;chr&gt;, `1958` &lt;chr&gt;, `1959` &lt;chr&gt;, `1960` &lt;chr&gt;, `1961` &lt;chr&gt;,
@@ -484,7 +484,7 @@ summary {
 <li>What is the structure of the data? Show the classes of each variable.</li>
 </ol>
 <pre class="r"><code>str(fisheries)</code></pre>
-<pre><code>## Classes &#39;spec_tbl_df&#39;, &#39;tbl_df&#39;, &#39;tbl&#39; and &#39;data.frame&#39;: 17692 obs. of  71 variables:
+<pre><code>## Classes 'spec_tbl_df', 'tbl_df', 'tbl' and 'data.frame': 17692 obs. of  71 variables:
 ##  $ Country                : chr  &quot;Albania&quot; &quot;Albania&quot; &quot;Albania&quot; &quot;Albania&quot; ...
 ##  $ Common name            : chr  &quot;Angelsharks, sand devils nei&quot; &quot;Atlantic bonito&quot; &quot;Barracudas nei&quot; &quot;Blue and red shrimp&quot; ...
 ##  $ ISSCAAP group#         : num  38 36 37 45 32 37 33 45 38 57 ...
@@ -636,19 +636,19 @@ summary {
 <pre class="r"><code>fisheries$Country &lt;- as.factor(fisheries$Country)
 fisheries</code></pre>
 <pre><code>## # A tibble: 17,692 x 71
-##    Country `Common name` `ISSCAAP group#` `ISSCAAP taxono~ `ASFIS species#`
+##    Country `Common name` `ISSCAAP group#` `ISSCAAP taxono&lt;U+2026&gt; `ASFIS species#`
 ##    &lt;fct&gt;   &lt;chr&gt;                    &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;           
-##  1 Albania Angelsharks,~               38 Sharks, rays, c~ 10903XXXXX      
-##  2 Albania Atlantic bon~               36 Tunas, bonitos,~ 1750100101      
-##  3 Albania Barracudas n~               37 Miscellaneous p~ 17710001XX      
-##  4 Albania Blue and red~               45 Shrimps, prawns  2280203101      
-##  5 Albania Blue whiting~               32 Cods, hakes, ha~ 1480403301      
-##  6 Albania Bluefish                    37 Miscellaneous p~ 1702021301      
-##  7 Albania Bogue                       33 Miscellaneous c~ 1703926101      
-##  8 Albania Caramote pra~               45 Shrimps, prawns  2280100117      
-##  9 Albania Catsharks, n~               38 Sharks, rays, c~ 10801003XX      
-## 10 Albania Common cuttl~               57 Squids, cuttlef~ 3210200202      
-## # ... with 17,682 more rows, and 66 more variables: `ASFIS species name` &lt;chr&gt;,
+##  1 Albania Angelsharks,&lt;U+2026&gt;               38 Sharks, rays, c&lt;U+2026&gt; 10903XXXXX      
+##  2 Albania Atlantic bon&lt;U+2026&gt;               36 Tunas, bonitos,&lt;U+2026&gt; 1750100101      
+##  3 Albania Barracudas n&lt;U+2026&gt;               37 Miscellaneous p&lt;U+2026&gt; 17710001XX      
+##  4 Albania Blue and red&lt;U+2026&gt;               45 Shrimps, prawns  2280203101      
+##  5 Albania Blue whiting&lt;U+2026&gt;               32 Cods, hakes, ha&lt;U+2026&gt; 1480403301      
+##  6 Albania Bluefish                    37 Miscellaneous p&lt;U+2026&gt; 1702021301      
+##  7 Albania Bogue                       33 Miscellaneous c&lt;U+2026&gt; 1703926101      
+##  8 Albania Caramote pra&lt;U+2026&gt;               45 Shrimps, prawns  2280100117      
+##  9 Albania Catsharks, n&lt;U+2026&gt;               38 Sharks, rays, c&lt;U+2026&gt; 10801003XX      
+## 10 Albania Common cuttl&lt;U+2026&gt;               57 Squids, cuttlef&lt;U+2026&gt; 3210200202      
+## # &lt;U+2026&gt; with 17,682 more rows, and 66 more variables: `ASFIS species name` &lt;chr&gt;,
 ## #   `FAO major fishing area` &lt;dbl&gt;, Measure &lt;chr&gt;, `1950` &lt;chr&gt;, `1951` &lt;chr&gt;,
 ## #   `1952` &lt;chr&gt;, `1953` &lt;chr&gt;, `1954` &lt;chr&gt;, `1955` &lt;chr&gt;, `1956` &lt;chr&gt;,
 ## #   `1957` &lt;chr&gt;, `1958` &lt;chr&gt;, `1959` &lt;chr&gt;, `1960` &lt;chr&gt;, `1961` &lt;chr&gt;,
@@ -691,7 +691,7 @@ fisheries</code></pre>
 ##  8 Aruba              
 ##  9 Australia          
 ## 10 Bahamas            
-## # ... with 194 more rows</code></pre>
+## # &lt;U+2026&gt; with 194 more rows</code></pre>
 <ol start="7" style="list-style-type: decimal">
 <li>Use <code>rename()</code> to rename the columns and make them easier to use. The new column names should be:<br />
 </li>
@@ -717,19 +717,19 @@ fisheries</code></pre>
                 unit = &quot;Measure&quot;)
 fisheries2</code></pre>
 <pre><code>## # A tibble: 17,692 x 71
-##    country comname ISSCAAP_spgroup ISSCAAP_spgroup~ ASFIS_spcode ASFIS_sciname
+##    country comname ISSCAAP_spgroup ISSCAAP_spgroup&lt;U+2026&gt; ASFIS_spcode ASFIS_sciname
 ##    &lt;fct&gt;   &lt;chr&gt;             &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;        &lt;chr&gt;        
-##  1 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-##  2 Albania Atlant~              36 Tunas, bonitos,~ 1750100101   Sarda sarda  
-##  3 Albania Barrac~              37 Miscellaneous p~ 17710001XX   Sphyraena spp
-##  4 Albania Blue a~              45 Shrimps, prawns  2280203101   Aristeus ant~
-##  5 Albania Blue w~              32 Cods, hakes, ha~ 1480403301   Micromesisti~
-##  6 Albania Bluefi~              37 Miscellaneous p~ 1702021301   Pomatomus sa~
-##  7 Albania Bogue                33 Miscellaneous c~ 1703926101   Boops boops  
-##  8 Albania Caramo~              45 Shrimps, prawns  2280100117   Penaeus kera~
-##  9 Albania Catsha~              38 Sharks, rays, c~ 10801003XX   Scyliorhinus~
-## 10 Albania Common~              57 Squids, cuttlef~ 3210200202   Sepia offici~
-## # ... with 17,682 more rows, and 65 more variables: FAO_area &lt;dbl&gt;, unit &lt;chr&gt;,
+##  1 Albania Angels&lt;U+2026&gt;              38 Sharks, rays, c&lt;U+2026&gt; 10903XXXXX   Squatinidae  
+##  2 Albania Atlant&lt;U+2026&gt;              36 Tunas, bonitos,&lt;U+2026&gt; 1750100101   Sarda sarda  
+##  3 Albania Barrac&lt;U+2026&gt;              37 Miscellaneous p&lt;U+2026&gt; 17710001XX   Sphyraena spp
+##  4 Albania Blue a&lt;U+2026&gt;              45 Shrimps, prawns  2280203101   Aristeus ant&lt;U+2026&gt;
+##  5 Albania Blue w&lt;U+2026&gt;              32 Cods, hakes, ha&lt;U+2026&gt; 1480403301   Micromesisti&lt;U+2026&gt;
+##  6 Albania Bluefi&lt;U+2026&gt;              37 Miscellaneous p&lt;U+2026&gt; 1702021301   Pomatomus sa&lt;U+2026&gt;
+##  7 Albania Bogue                33 Miscellaneous c&lt;U+2026&gt; 1703926101   Boops boops  
+##  8 Albania Caramo&lt;U+2026&gt;              45 Shrimps, prawns  2280100117   Penaeus kera&lt;U+2026&gt;
+##  9 Albania Catsha&lt;U+2026&gt;              38 Sharks, rays, c&lt;U+2026&gt; 10801003XX   Scyliorhinus&lt;U+2026&gt;
+## 10 Albania Common&lt;U+2026&gt;              57 Squids, cuttlef&lt;U+2026&gt; 3210200202   Sepia offici&lt;U+2026&gt;
+## # &lt;U+2026&gt; with 17,682 more rows, and 65 more variables: FAO_area &lt;dbl&gt;, unit &lt;chr&gt;,
 ## #   `1950` &lt;chr&gt;, `1951` &lt;chr&gt;, `1952` &lt;chr&gt;, `1953` &lt;chr&gt;, `1954` &lt;chr&gt;,
 ## #   `1955` &lt;chr&gt;, `1956` &lt;chr&gt;, `1957` &lt;chr&gt;, `1958` &lt;chr&gt;, `1959` &lt;chr&gt;,
 ## #   `1960` &lt;chr&gt;, `1961` &lt;chr&gt;, `1962` &lt;chr&gt;, `1963` &lt;chr&gt;, `1964` &lt;chr&gt;,
@@ -754,19 +754,19 @@ Data isn’t tidy, the year is a column when it should be a variable</li>
               values_drop_na = TRUE)
 fisheries_tidy</code></pre>
 <pre><code>## # A tibble: 376,771 x 10
-##    country comname ISSCAAP_spgroup ISSCAAP_spgroup~ ASFIS_spcode ASFIS_sciname
+##    country comname ISSCAAP_spgroup ISSCAAP_spgroup&lt;U+2026&gt; ASFIS_spcode ASFIS_sciname
 ##    &lt;fct&gt;   &lt;chr&gt;             &lt;dbl&gt; &lt;chr&gt;            &lt;chr&gt;        &lt;chr&gt;        
-##  1 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-##  2 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-##  3 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-##  4 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-##  5 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-##  6 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-##  7 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-##  8 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-##  9 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-## 10 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-## # ... with 376,761 more rows, and 4 more variables: FAO_area &lt;dbl&gt;, unit &lt;chr&gt;,
+##  1 Albania Angels&lt;U+2026&gt;              38 Sharks, rays, c&lt;U+2026&gt; 10903XXXXX   Squatinidae  
+##  2 Albania Angels&lt;U+2026&gt;              38 Sharks, rays, c&lt;U+2026&gt; 10903XXXXX   Squatinidae  
+##  3 Albania Angels&lt;U+2026&gt;              38 Sharks, rays, c&lt;U+2026&gt; 10903XXXXX   Squatinidae  
+##  4 Albania Angels&lt;U+2026&gt;              38 Sharks, rays, c&lt;U+2026&gt; 10903XXXXX   Squatinidae  
+##  5 Albania Angels&lt;U+2026&gt;              38 Sharks, rays, c&lt;U+2026&gt; 10903XXXXX   Squatinidae  
+##  6 Albania Angels&lt;U+2026&gt;              38 Sharks, rays, c&lt;U+2026&gt; 10903XXXXX   Squatinidae  
+##  7 Albania Angels&lt;U+2026&gt;              38 Sharks, rays, c&lt;U+2026&gt; 10903XXXXX   Squatinidae  
+##  8 Albania Angels&lt;U+2026&gt;              38 Sharks, rays, c&lt;U+2026&gt; 10903XXXXX   Squatinidae  
+##  9 Albania Angels&lt;U+2026&gt;              38 Sharks, rays, c&lt;U+2026&gt; 10903XXXXX   Squatinidae  
+## 10 Albania Angels&lt;U+2026&gt;              38 Sharks, rays, c&lt;U+2026&gt; 10903XXXXX   Squatinidae  
+## # &lt;U+2026&gt; with 376,761 more rows, and 4 more variables: FAO_area &lt;dbl&gt;, unit &lt;chr&gt;,
 ## #   year &lt;chr&gt;, catch &lt;chr&gt;</code></pre>
 <ol start="9" style="list-style-type: decimal">
 <li>Refocus the data only to include country, ISSCAAP_spgroupname, ASFIS_spcode, ASFIS_sciname, year, and catch.</li>
@@ -787,7 +787,7 @@ fisheries_tidy2</code></pre>
 ##  8 Albania Sharks, rays, chimaeras 10903XXXXX   Squatinidae   2002  79   
 ##  9 Albania Sharks, rays, chimaeras 10903XXXXX   Squatinidae   2003  1    
 ## 10 Albania Sharks, rays, chimaeras 10903XXXXX   Squatinidae   2004  4    
-## # ... with 376,761 more rows</code></pre>
+## # &lt;U+2026&gt; with 376,761 more rows</code></pre>
 <ol start="10" style="list-style-type: decimal">
 <li>Re-check the classes of <code>fisheries_tidy2</code>. Notice that “catch” is shown as a character! This is a problem because we will want to treat it as a numeric. How will you deal with this?</li>
 </ol>
@@ -826,7 +826,7 @@ fisheries_tidy2</code></pre>
 </ol>
 <pre class="r"><code>fisheries_tidy2 %&gt;% 
   filter(ASFIS_sciname == &quot;Sardina pilchardus&quot;) %&gt;% 
-  filter(year &gt;= 1990 | year &lt;= 2000) %&gt;% 
+  filter(year &gt;= 1990 &amp; year &lt;= 2000) %&gt;% 
   group_by(country) %&gt;% 
   summarize(sardines_caught = sum(catch, na.rm = TRUE)) %&gt;% 
   arrange(desc(sardines_caught)) %&gt;% 
@@ -842,20 +842,20 @@ fisheries_tidy2</code></pre>
 </ol>
 <pre class="r"><code>fisheries_tidy2 %&gt;% 
   filter(ISSCAAP_spgroupname == &quot;Squids, cuttlefishes, octopuses&quot;) %&gt;% 
-  filter(year &gt;= 2008 | year &lt;= 2012) %&gt;% 
+  filter(year &gt;= 2008 &amp; year &lt;= 2012) %&gt;% 
   group_by(country) %&gt;% 
   summarize(cephalopods_caught = sum(catch, na.rm = TRUE)) %&gt;% 
   arrange(desc(cephalopods_caught)) %&gt;% 
   top_n(5)</code></pre>
 <pre><code>## Selecting by cephalopods_caught</code></pre>
 <pre><code>## # A tibble: 5 x 2
-##   country                  cephalopods_caught
-##   &lt;fct&gt;                                 &lt;dbl&gt;
-## 1 Japan                              35156470
-## 2 Korea, Republic of                 12826527
-## 3 China                              10206977
-## 4 Taiwan Province of China            5573244
-## 5 Thailand                            5354219</code></pre>
+##   country            cephalopods_caught
+##   &lt;fct&gt;                           &lt;dbl&gt;
+## 1 China                         4785139
+## 2 Peru                          2274232
+## 3 Korea, Republic of            1535454
+## 4 Japan                         1394041
+## 5 Chile                          723186</code></pre>
 <ol start="15" style="list-style-type: decimal">
 <li>Given the top five countries from question 12 above, which species was the highest catch total? The lowest? Engraulis ringens was highest, multiple way tie for lowest</li>
 </ol>
@@ -881,7 +881,7 @@ fisheries_tidy2</code></pre>
 ##  8 Notothenia squamifrons             0
 ##  9 Nototheniidae                      0
 ## 10 Nototheniops nudifrons             0
-## # ... with 578 more rows</code></pre>
+## # &lt;U+2026&gt; with 578 more rows</code></pre>
 <ol start="16" style="list-style-type: decimal">
 <li>In some cases, the taxonomy of the fish being caught is unclear. Make a new data frame called <code>coastal_fish</code> that shows the taxonomic composition of “Miscellaneous coastal fishes” within the ISSCAAP_spgroupname column.</li>
 </ol>
@@ -14648,597 +14648,597 @@ coastal_fish</code></pre>
 ## 13756                  Cyprus Miscellaneous coastal fishes    1703903303
 ## 13757                  Cyprus Miscellaneous coastal fishes    17063XXXXX
 ## 13758                  Cyprus Miscellaneous coastal fishes    17063XXXXX
-## 13759        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13760        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13761        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13762        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13763        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13764        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13765        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13766        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13767        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13768        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13769        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13770        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13771        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13772        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13773        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13774        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13775        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13776        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13777        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13778        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13779        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13780        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13781        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13782        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13783        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13784        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13785        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13786        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13787        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13788        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13789        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13790        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13791        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13792        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13793        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13794        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13795        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13796        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13797        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13798        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13799        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13800        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1705013202
-## 13801        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13802        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13803        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13804        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13805        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13806        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13807        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13808        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13809        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13810        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13811        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13812        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13813        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13814        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13815        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13816        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13817        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13818        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13819        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13820        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13821        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13822        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13823        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13824        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13825        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13826        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13827        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13828        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13829        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13830        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13831        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13832        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13833        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13834        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13835        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13836        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13837        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13838        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13839        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13840        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13841        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13842        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13843        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13844        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13845        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13846        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13847        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13848        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13849        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13850        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13851        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13852        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13853        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13854        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13855        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13856        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703626303
-## 13857        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13858        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13859        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13860        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13861        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13862        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13863        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13864        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13865        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13866        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13867        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13868        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13869        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13870        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13871        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13872        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13873        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13874        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13875        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13876        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13877        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13878        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13879        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13880        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13881        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13882        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17011026XX
-## 13883        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13884        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13885        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13886        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13887        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13888        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13889        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13890        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13891        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13892        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13893        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13894        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13895        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13896        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13897        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13898        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13899        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13900        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13901        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13902        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13903        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13904        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13905        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13906        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745705
-## 13907        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13908        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13909        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13910        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13911        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13912        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13913        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13914        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13915        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13916        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13917        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13918        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13919        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13920        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13921        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13922        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13923        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13924        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13925        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13926        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13927        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13928        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13929        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13930        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13931        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13932        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13933        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13934        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13935        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1300100501
-## 13936        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745702
-## 13937        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745702
-## 13938        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745702
-## 13939        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745702
-## 13940        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745702
-## 13941        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745702
-## 13942        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745702
-## 13943        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745702
-## 13944        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745702
-## 13945        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745702
-## 13946        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745702
-## 13947        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745702
-## 13948        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745702
-## 13949        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745702
-## 13950        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745702
-## 13951        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745702
-## 13952        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745702
-## 13953        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703745702
-## 13954        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037XXXXX
-## 13955        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037XXXXX
-## 13956        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037XXXXX
-## 13957        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037XXXXX
-## 13958        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037XXXXX
-## 13959        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13960        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13961        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13962        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13963        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13964        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13965        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13966        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13967        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13968        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13969        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13970        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13971        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13972        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13973        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13974        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13975        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13976        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13977        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13978        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13979        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13980        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13981        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13982        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13983        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13984        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13985        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13986        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13987        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13988        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13989        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13990        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13991        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13992        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13993        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13994        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13995        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13996        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13997        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13998        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 13999        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14000        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14001        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14002        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14003        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14004        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14005        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14006        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14007        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14008        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14009        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14010        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14011        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14012        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14013        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14014        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14015        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14016        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14017        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14018        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14019        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14020        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14021        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1707700302
-## 14022        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703710601
-## 14023        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703710601
-## 14024        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703710601
-## 14025        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703710601
-## 14026        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703710601
-## 14027        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703710601
-## 14028        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703710601
-## 14029        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703710601
-## 14030        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703710601
-## 14031        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703710601
-## 14032        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703710601
-## 14033        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703710601
-## 14034        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703710601
-## 14035        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703710601
-## 14036        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703710601
-## 14037        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703710601
-## 14038        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703710601
-## 14039        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14040        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14041        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14042        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14043        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14044        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14045        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14046        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14047        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14048        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14049        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14050        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14051        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14052        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14053        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14054        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14055        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14056        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14057        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14058        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14059        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14060        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14061        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14062        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14063        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14064        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14065        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14066        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14067        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14068        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14069        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14070        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14071        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14072        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14073        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14074        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14075        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14076        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14077        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14078        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14079        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14080        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14081        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14082        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14083        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14084        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14085        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14086        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14087        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14088        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14089        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14090        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14091        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14092        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14093        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14094        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14095        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14096        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14097        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14098        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039008XX
-## 14099        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14100        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14101        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14102        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14103        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14104        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14105        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14106        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14107        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14108        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14109        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14110        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14111        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14112        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14113        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14114        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14115        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14116        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14117        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14118        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14119        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14120        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14121        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14122        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14123        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14124        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17039XXXXX
-## 14125        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14126        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14127        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14128        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14129        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14130        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14131        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14132        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14133        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14134        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14135        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14136        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14137        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14138        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14139        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14140        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14141        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14142        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14143        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14144        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14145        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14146        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14147        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14148        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14149        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14150        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14151        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14152        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14153        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14154        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14155        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14156        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14157        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14158        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14159        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14160        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14161        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14162        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14163        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14164        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14165        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14166        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    14102XXXXX
-## 14167        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17032027XX
-## 14168        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17032027XX
-## 14169        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17032027XX
-## 14170        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17032027XX
-## 14171        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17032027XX
-## 14172        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17032027XX
-## 14173        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14174        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14175        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14176        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14177        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14178        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14179        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14180        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14181        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14182        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14183        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14184        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14185        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14186        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14187        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14188        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14189        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14190        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14191        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14192        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14193        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14194        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14195        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14196        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14197        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14198        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14199        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14200        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14201        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14202        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14203        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14204        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14205        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14206        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14207        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14208        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14209        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14210        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14211        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14212        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14213        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14214        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14215        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14216        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14217        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14218        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14219        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14220        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14221        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14222        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14223        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14224        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14225        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14226        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14227        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14228        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14229        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14230        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14231        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14232        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14233        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14234        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14235        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1703620919
-## 14236        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14237        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14238        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14239        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14240        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14241        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14242        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14243        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14244        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14245        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14246        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14247        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14248        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14249        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14250        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14251        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14252        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14253        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14254        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14255        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14256        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14257        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14258        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14259        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14260        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14261        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14262        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14263        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14264        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14265        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14266        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14267        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14268        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14269        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14270        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14271        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14272        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14273        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14274        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14275        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14276        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14277        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14278        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14279        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14280        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14281        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14282        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14283        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14284        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14285        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14286        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14287        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14288        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14289        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14290        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14291        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14292        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14293        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14294        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14295        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14296        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14297        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14298        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    17037457XX
-## 14299        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14300        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14301        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14302        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14303        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14304        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14305        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14306        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14307        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14308        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14309        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14310        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14311        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14312        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14313        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14314        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14315        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14316        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14317        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14318        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14319        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14320        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14321        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14322        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14323        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14324        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14325        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14326        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14327        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14328        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14329        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14330        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14331        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1704149903
-## 14332        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1700204202
-## 14333        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1700204202
-## 14334        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1700204202
-## 14335        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1700204202
-## 14336        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1700204202
-## 14337        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1700204202
-## 14338        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1700204202
-## 14339        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1700204202
-## 14340        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1700204202
-## 14341        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1700204202
-## 14342        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1700204202
-## 14343        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1700204202
-## 14344        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1700204202
-## 14345        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1700204202
-## 14346        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1700204202
-## 14347        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1700204202
-## 14348        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1700204202
-## 14349        C&lt;f4&gt;te d&#39;Ivoire Miscellaneous coastal fishes    1700204202
+## 13759        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13760        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13761        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13762        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13763        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13764        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13765        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13766        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13767        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13768        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13769        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13770        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13771        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13772        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13773        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13774        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13775        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13776        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13777        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13778        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13779        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13780        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13781        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13782        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13783        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13784        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13785        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13786        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13787        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13788        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13789        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13790        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13791        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13792        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13793        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13794        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13795        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13796        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13797        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13798        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13799        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13800        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1705013202
+## 13801        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13802        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13803        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13804        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13805        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13806        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13807        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13808        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13809        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13810        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13811        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13812        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13813        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13814        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13815        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13816        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13817        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13818        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13819        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13820        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13821        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13822        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13823        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13824        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13825        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13826        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13827        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13828        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13829        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13830        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13831        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13832        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13833        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13834        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13835        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13836        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13837        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13838        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13839        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13840        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13841        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13842        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13843        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13844        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13845        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13846        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13847        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13848        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13849        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13850        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13851        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13852        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13853        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13854        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13855        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13856        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703626303
+## 13857        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13858        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13859        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13860        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13861        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13862        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13863        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13864        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13865        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13866        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13867        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13868        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13869        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13870        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13871        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13872        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13873        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13874        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13875        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13876        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13877        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13878        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13879        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13880        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13881        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13882        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17011026XX
+## 13883        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13884        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13885        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13886        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13887        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13888        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13889        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13890        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13891        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13892        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13893        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13894        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13895        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13896        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13897        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13898        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13899        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13900        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13901        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13902        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13903        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13904        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13905        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13906        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745705
+## 13907        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13908        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13909        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13910        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13911        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13912        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13913        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13914        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13915        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13916        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13917        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13918        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13919        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13920        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13921        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13922        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13923        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13924        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13925        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13926        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13927        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13928        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13929        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13930        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13931        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13932        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13933        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13934        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13935        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1300100501
+## 13936        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745702
+## 13937        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745702
+## 13938        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745702
+## 13939        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745702
+## 13940        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745702
+## 13941        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745702
+## 13942        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745702
+## 13943        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745702
+## 13944        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745702
+## 13945        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745702
+## 13946        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745702
+## 13947        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745702
+## 13948        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745702
+## 13949        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745702
+## 13950        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745702
+## 13951        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745702
+## 13952        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745702
+## 13953        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703745702
+## 13954        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037XXXXX
+## 13955        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037XXXXX
+## 13956        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037XXXXX
+## 13957        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037XXXXX
+## 13958        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037XXXXX
+## 13959        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13960        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13961        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13962        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13963        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13964        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13965        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13966        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13967        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13968        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13969        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13970        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13971        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13972        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13973        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13974        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13975        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13976        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13977        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13978        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13979        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13980        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13981        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13982        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13983        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13984        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13985        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13986        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13987        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13988        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13989        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13990        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13991        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13992        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13993        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13994        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13995        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13996        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13997        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13998        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 13999        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14000        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14001        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14002        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14003        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14004        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14005        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14006        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14007        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14008        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14009        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14010        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14011        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14012        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14013        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14014        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14015        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14016        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14017        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14018        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14019        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14020        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14021        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1707700302
+## 14022        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703710601
+## 14023        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703710601
+## 14024        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703710601
+## 14025        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703710601
+## 14026        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703710601
+## 14027        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703710601
+## 14028        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703710601
+## 14029        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703710601
+## 14030        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703710601
+## 14031        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703710601
+## 14032        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703710601
+## 14033        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703710601
+## 14034        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703710601
+## 14035        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703710601
+## 14036        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703710601
+## 14037        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703710601
+## 14038        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703710601
+## 14039        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14040        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14041        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14042        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14043        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14044        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14045        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14046        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14047        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14048        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14049        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14050        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14051        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14052        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14053        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14054        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14055        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14056        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14057        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14058        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14059        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14060        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14061        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14062        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14063        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14064        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14065        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14066        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14067        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14068        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14069        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14070        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14071        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14072        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14073        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14074        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14075        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14076        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14077        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14078        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14079        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14080        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14081        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14082        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14083        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14084        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14085        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14086        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14087        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14088        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14089        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14090        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14091        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14092        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14093        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14094        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14095        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14096        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14097        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14098        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039008XX
+## 14099        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14100        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14101        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14102        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14103        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14104        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14105        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14106        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14107        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14108        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14109        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14110        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14111        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14112        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14113        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14114        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14115        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14116        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14117        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14118        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14119        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14120        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14121        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14122        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14123        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14124        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17039XXXXX
+## 14125        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14126        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14127        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14128        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14129        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14130        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14131        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14132        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14133        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14134        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14135        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14136        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14137        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14138        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14139        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14140        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14141        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14142        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14143        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14144        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14145        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14146        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14147        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14148        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14149        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14150        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14151        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14152        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14153        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14154        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14155        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14156        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14157        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14158        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14159        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14160        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14161        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14162        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14163        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14164        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14165        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14166        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    14102XXXXX
+## 14167        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17032027XX
+## 14168        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17032027XX
+## 14169        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17032027XX
+## 14170        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17032027XX
+## 14171        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17032027XX
+## 14172        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17032027XX
+## 14173        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14174        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14175        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14176        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14177        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14178        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14179        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14180        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14181        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14182        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14183        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14184        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14185        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14186        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14187        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14188        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14189        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14190        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14191        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14192        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14193        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14194        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14195        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14196        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14197        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14198        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14199        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14200        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14201        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14202        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14203        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14204        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14205        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14206        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14207        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14208        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14209        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14210        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14211        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14212        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14213        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14214        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14215        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14216        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14217        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14218        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14219        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14220        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14221        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14222        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14223        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14224        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14225        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14226        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14227        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14228        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14229        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14230        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14231        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14232        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14233        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14234        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14235        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1703620919
+## 14236        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14237        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14238        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14239        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14240        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14241        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14242        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14243        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14244        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14245        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14246        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14247        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14248        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14249        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14250        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14251        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14252        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14253        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14254        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14255        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14256        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14257        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14258        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14259        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14260        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14261        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14262        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14263        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14264        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14265        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14266        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14267        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14268        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14269        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14270        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14271        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14272        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14273        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14274        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14275        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14276        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14277        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14278        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14279        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14280        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14281        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14282        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14283        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14284        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14285        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14286        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14287        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14288        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14289        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14290        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14291        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14292        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14293        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14294        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14295        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14296        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14297        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14298        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    17037457XX
+## 14299        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14300        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14301        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14302        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14303        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14304        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14305        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14306        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14307        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14308        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14309        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14310        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14311        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14312        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14313        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14314        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14315        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14316        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14317        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14318        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14319        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14320        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14321        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14322        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14323        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14324        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14325        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14326        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14327        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14328        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14329        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14330        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14331        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1704149903
+## 14332        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1700204202
+## 14333        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1700204202
+## 14334        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1700204202
+## 14335        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1700204202
+## 14336        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1700204202
+## 14337        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1700204202
+## 14338        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1700204202
+## 14339        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1700204202
+## 14340        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1700204202
+## 14341        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1700204202
+## 14342        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1700204202
+## 14343        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1700204202
+## 14344        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1700204202
+## 14345        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1700204202
+## 14346        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1700204202
+## 14347        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1700204202
+## 14348        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1700204202
+## 14349        C&lt;f4&gt;te d'Ivoire Miscellaneous coastal fishes    1700204202
 ## 14350                 Denmark Miscellaneous coastal fishes    1711500401
 ## 14351                 Denmark Miscellaneous coastal fishes    1711500401
 ## 14352                 Denmark Miscellaneous coastal fishes    1711500401
@@ -34223,7 +34223,7 @@ coastal_fish</code></pre>
 ## 16664                     Ariidae 1998    114
 ## 16665                     Ariidae 1999    101
 ## 16666                     Ariidae 2000    172
-##  [ reached &#39;max&#39; / getOption(&quot;max.print&quot;) -- omitted 53155 rows ]</code></pre>
+##  [ reached 'max' / getOption(&quot;max.print&quot;) -- omitted 53155 rows ]</code></pre>
 <ol start="17" style="list-style-type: decimal">
 <li>Use the data to do at least one exploratory analysis of your choice. What can you learn? What are the top five of coastal fish caught in 2010?</li>
 </ol>

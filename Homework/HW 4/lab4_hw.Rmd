@@ -134,7 +134,7 @@ fisheries_tidy2 %>%
 ```{r}
 fisheries_tidy2 %>% 
   filter(ASFIS_sciname == "Sardina pilchardus") %>% 
-  filter(year >= 1990 | year <= 2000) %>% 
+  filter(year >= 1990 & year <= 2000) %>% 
   group_by(country) %>% 
   summarize(sardines_caught = sum(catch, na.rm = TRUE)) %>% 
   arrange(desc(sardines_caught)) %>% 
@@ -147,7 +147,7 @@ fisheries_tidy2 %>%
 ```{r}
 fisheries_tidy2 %>% 
   filter(ISSCAAP_spgroupname == "Squids, cuttlefishes, octopuses") %>% 
-  filter(year >= 2008 | year <= 2012) %>% 
+  filter(year >= 2008 & year <= 2012) %>% 
   group_by(country) %>% 
   summarize(cephalopods_caught = sum(catch, na.rm = TRUE)) %>% 
   arrange(desc(cephalopods_caught)) %>% 

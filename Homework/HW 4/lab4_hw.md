@@ -47,19 +47,19 @@ fisheries
 
 ```
 ## # A tibble: 17,692 x 71
-##    Country `Common name` `ISSCAAP group#` `ISSCAAP taxono~ `ASFIS species#`
+##    Country `Common name` `ISSCAAP group#` `ISSCAAP taxono<U+2026> `ASFIS species#`
 ##    <chr>   <chr>                    <dbl> <chr>            <chr>           
-##  1 Albania Angelsharks,~               38 Sharks, rays, c~ 10903XXXXX      
-##  2 Albania Atlantic bon~               36 Tunas, bonitos,~ 1750100101      
-##  3 Albania Barracudas n~               37 Miscellaneous p~ 17710001XX      
-##  4 Albania Blue and red~               45 Shrimps, prawns  2280203101      
-##  5 Albania Blue whiting~               32 Cods, hakes, ha~ 1480403301      
-##  6 Albania Bluefish                    37 Miscellaneous p~ 1702021301      
-##  7 Albania Bogue                       33 Miscellaneous c~ 1703926101      
-##  8 Albania Caramote pra~               45 Shrimps, prawns  2280100117      
-##  9 Albania Catsharks, n~               38 Sharks, rays, c~ 10801003XX      
-## 10 Albania Common cuttl~               57 Squids, cuttlef~ 3210200202      
-## # ... with 17,682 more rows, and 66 more variables: `ASFIS species name` <chr>,
+##  1 Albania Angelsharks,<U+2026>               38 Sharks, rays, c<U+2026> 10903XXXXX      
+##  2 Albania Atlantic bon<U+2026>               36 Tunas, bonitos,<U+2026> 1750100101      
+##  3 Albania Barracudas n<U+2026>               37 Miscellaneous p<U+2026> 17710001XX      
+##  4 Albania Blue and red<U+2026>               45 Shrimps, prawns  2280203101      
+##  5 Albania Blue whiting<U+2026>               32 Cods, hakes, ha<U+2026> 1480403301      
+##  6 Albania Bluefish                    37 Miscellaneous p<U+2026> 1702021301      
+##  7 Albania Bogue                       33 Miscellaneous c<U+2026> 1703926101      
+##  8 Albania Caramote pra<U+2026>               45 Shrimps, prawns  2280100117      
+##  9 Albania Catsharks, n<U+2026>               38 Sharks, rays, c<U+2026> 10801003XX      
+## 10 Albania Common cuttl<U+2026>               57 Squids, cuttlef<U+2026> 3210200202      
+## # <U+2026> with 17,682 more rows, and 66 more variables: `ASFIS species name` <chr>,
 ## #   `FAO major fishing area` <dbl>, Measure <chr>, `1950` <chr>, `1951` <chr>,
 ## #   `1952` <chr>, `1953` <chr>, `1954` <chr>, `1955` <chr>, `1956` <chr>,
 ## #   `1957` <chr>, `1958` <chr>, `1959` <chr>, `1960` <chr>, `1961` <chr>,
@@ -287,19 +287,19 @@ fisheries
 
 ```
 ## # A tibble: 17,692 x 71
-##    Country `Common name` `ISSCAAP group#` `ISSCAAP taxono~ `ASFIS species#`
+##    Country `Common name` `ISSCAAP group#` `ISSCAAP taxono<U+2026> `ASFIS species#`
 ##    <fct>   <chr>                    <dbl> <chr>            <chr>           
-##  1 Albania Angelsharks,~               38 Sharks, rays, c~ 10903XXXXX      
-##  2 Albania Atlantic bon~               36 Tunas, bonitos,~ 1750100101      
-##  3 Albania Barracudas n~               37 Miscellaneous p~ 17710001XX      
-##  4 Albania Blue and red~               45 Shrimps, prawns  2280203101      
-##  5 Albania Blue whiting~               32 Cods, hakes, ha~ 1480403301      
-##  6 Albania Bluefish                    37 Miscellaneous p~ 1702021301      
-##  7 Albania Bogue                       33 Miscellaneous c~ 1703926101      
-##  8 Albania Caramote pra~               45 Shrimps, prawns  2280100117      
-##  9 Albania Catsharks, n~               38 Sharks, rays, c~ 10801003XX      
-## 10 Albania Common cuttl~               57 Squids, cuttlef~ 3210200202      
-## # ... with 17,682 more rows, and 66 more variables: `ASFIS species name` <chr>,
+##  1 Albania Angelsharks,<U+2026>               38 Sharks, rays, c<U+2026> 10903XXXXX      
+##  2 Albania Atlantic bon<U+2026>               36 Tunas, bonitos,<U+2026> 1750100101      
+##  3 Albania Barracudas n<U+2026>               37 Miscellaneous p<U+2026> 17710001XX      
+##  4 Albania Blue and red<U+2026>               45 Shrimps, prawns  2280203101      
+##  5 Albania Blue whiting<U+2026>               32 Cods, hakes, ha<U+2026> 1480403301      
+##  6 Albania Bluefish                    37 Miscellaneous p<U+2026> 1702021301      
+##  7 Albania Bogue                       33 Miscellaneous c<U+2026> 1703926101      
+##  8 Albania Caramote pra<U+2026>               45 Shrimps, prawns  2280100117      
+##  9 Albania Catsharks, n<U+2026>               38 Sharks, rays, c<U+2026> 10801003XX      
+## 10 Albania Common cuttl<U+2026>               57 Squids, cuttlef<U+2026> 3210200202      
+## # <U+2026> with 17,682 more rows, and 66 more variables: `ASFIS species name` <chr>,
 ## #   `FAO major fishing area` <dbl>, Measure <chr>, `1950` <chr>, `1951` <chr>,
 ## #   `1952` <chr>, `1953` <chr>, `1954` <chr>, `1955` <chr>, `1956` <chr>,
 ## #   `1957` <chr>, `1958` <chr>, `1959` <chr>, `1960` <chr>, `1961` <chr>,
@@ -354,7 +354,7 @@ fisheries %>%
 ##  8 Aruba              
 ##  9 Australia          
 ## 10 Bahamas            
-## # ... with 194 more rows
+## # <U+2026> with 194 more rows
 ```
 
 
@@ -383,19 +383,19 @@ fisheries2
 
 ```
 ## # A tibble: 17,692 x 71
-##    country comname ISSCAAP_spgroup ISSCAAP_spgroup~ ASFIS_spcode ASFIS_sciname
+##    country comname ISSCAAP_spgroup ISSCAAP_spgroup<U+2026> ASFIS_spcode ASFIS_sciname
 ##    <fct>   <chr>             <dbl> <chr>            <chr>        <chr>        
-##  1 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-##  2 Albania Atlant~              36 Tunas, bonitos,~ 1750100101   Sarda sarda  
-##  3 Albania Barrac~              37 Miscellaneous p~ 17710001XX   Sphyraena spp
-##  4 Albania Blue a~              45 Shrimps, prawns  2280203101   Aristeus ant~
-##  5 Albania Blue w~              32 Cods, hakes, ha~ 1480403301   Micromesisti~
-##  6 Albania Bluefi~              37 Miscellaneous p~ 1702021301   Pomatomus sa~
-##  7 Albania Bogue                33 Miscellaneous c~ 1703926101   Boops boops  
-##  8 Albania Caramo~              45 Shrimps, prawns  2280100117   Penaeus kera~
-##  9 Albania Catsha~              38 Sharks, rays, c~ 10801003XX   Scyliorhinus~
-## 10 Albania Common~              57 Squids, cuttlef~ 3210200202   Sepia offici~
-## # ... with 17,682 more rows, and 65 more variables: FAO_area <dbl>, unit <chr>,
+##  1 Albania Angels<U+2026>              38 Sharks, rays, c<U+2026> 10903XXXXX   Squatinidae  
+##  2 Albania Atlant<U+2026>              36 Tunas, bonitos,<U+2026> 1750100101   Sarda sarda  
+##  3 Albania Barrac<U+2026>              37 Miscellaneous p<U+2026> 17710001XX   Sphyraena spp
+##  4 Albania Blue a<U+2026>              45 Shrimps, prawns  2280203101   Aristeus ant<U+2026>
+##  5 Albania Blue w<U+2026>              32 Cods, hakes, ha<U+2026> 1480403301   Micromesisti<U+2026>
+##  6 Albania Bluefi<U+2026>              37 Miscellaneous p<U+2026> 1702021301   Pomatomus sa<U+2026>
+##  7 Albania Bogue                33 Miscellaneous c<U+2026> 1703926101   Boops boops  
+##  8 Albania Caramo<U+2026>              45 Shrimps, prawns  2280100117   Penaeus kera<U+2026>
+##  9 Albania Catsha<U+2026>              38 Sharks, rays, c<U+2026> 10801003XX   Scyliorhinus<U+2026>
+## 10 Albania Common<U+2026>              57 Squids, cuttlef<U+2026> 3210200202   Sepia offici<U+2026>
+## # <U+2026> with 17,682 more rows, and 65 more variables: FAO_area <dbl>, unit <chr>,
 ## #   `1950` <chr>, `1951` <chr>, `1952` <chr>, `1953` <chr>, `1954` <chr>,
 ## #   `1955` <chr>, `1956` <chr>, `1957` <chr>, `1958` <chr>, `1959` <chr>,
 ## #   `1960` <chr>, `1961` <chr>, `1962` <chr>, `1963` <chr>, `1964` <chr>,
@@ -425,19 +425,19 @@ fisheries_tidy
 
 ```
 ## # A tibble: 376,771 x 10
-##    country comname ISSCAAP_spgroup ISSCAAP_spgroup~ ASFIS_spcode ASFIS_sciname
+##    country comname ISSCAAP_spgroup ISSCAAP_spgroup<U+2026> ASFIS_spcode ASFIS_sciname
 ##    <fct>   <chr>             <dbl> <chr>            <chr>        <chr>        
-##  1 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-##  2 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-##  3 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-##  4 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-##  5 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-##  6 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-##  7 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-##  8 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-##  9 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-## 10 Albania Angels~              38 Sharks, rays, c~ 10903XXXXX   Squatinidae  
-## # ... with 376,761 more rows, and 4 more variables: FAO_area <dbl>, unit <chr>,
+##  1 Albania Angels<U+2026>              38 Sharks, rays, c<U+2026> 10903XXXXX   Squatinidae  
+##  2 Albania Angels<U+2026>              38 Sharks, rays, c<U+2026> 10903XXXXX   Squatinidae  
+##  3 Albania Angels<U+2026>              38 Sharks, rays, c<U+2026> 10903XXXXX   Squatinidae  
+##  4 Albania Angels<U+2026>              38 Sharks, rays, c<U+2026> 10903XXXXX   Squatinidae  
+##  5 Albania Angels<U+2026>              38 Sharks, rays, c<U+2026> 10903XXXXX   Squatinidae  
+##  6 Albania Angels<U+2026>              38 Sharks, rays, c<U+2026> 10903XXXXX   Squatinidae  
+##  7 Albania Angels<U+2026>              38 Sharks, rays, c<U+2026> 10903XXXXX   Squatinidae  
+##  8 Albania Angels<U+2026>              38 Sharks, rays, c<U+2026> 10903XXXXX   Squatinidae  
+##  9 Albania Angels<U+2026>              38 Sharks, rays, c<U+2026> 10903XXXXX   Squatinidae  
+## 10 Albania Angels<U+2026>              38 Sharks, rays, c<U+2026> 10903XXXXX   Squatinidae  
+## # <U+2026> with 376,761 more rows, and 4 more variables: FAO_area <dbl>, unit <chr>,
 ## #   year <chr>, catch <chr>
 ```
 
@@ -464,7 +464,7 @@ fisheries_tidy2
 ##  8 Albania Sharks, rays, chimaeras 10903XXXXX   Squatinidae   2002  79   
 ##  9 Albania Sharks, rays, chimaeras 10903XXXXX   Squatinidae   2003  1    
 ## 10 Albania Sharks, rays, chimaeras 10903XXXXX   Squatinidae   2004  4    
-## # ... with 376,761 more rows
+## # <U+2026> with 376,761 more rows
 ```
 
 
@@ -530,7 +530,7 @@ fisheries_tidy2 %>%
 ```r
 fisheries_tidy2 %>% 
   filter(ASFIS_sciname == "Sardina pilchardus") %>% 
-  filter(year >= 1990 | year <= 2000) %>% 
+  filter(year >= 1990 & year <= 2000) %>% 
   group_by(country) %>% 
   summarize(sardines_caught = sum(catch, na.rm = TRUE)) %>% 
   arrange(desc(sardines_caught)) %>% 
@@ -555,7 +555,7 @@ fisheries_tidy2 %>%
 ```r
 fisheries_tidy2 %>% 
   filter(ISSCAAP_spgroupname == "Squids, cuttlefishes, octopuses") %>% 
-  filter(year >= 2008 | year <= 2012) %>% 
+  filter(year >= 2008 & year <= 2012) %>% 
   group_by(country) %>% 
   summarize(cephalopods_caught = sum(catch, na.rm = TRUE)) %>% 
   arrange(desc(cephalopods_caught)) %>% 
@@ -568,13 +568,13 @@ fisheries_tidy2 %>%
 
 ```
 ## # A tibble: 5 x 2
-##   country                  cephalopods_caught
-##   <fct>                                 <dbl>
-## 1 Japan                              35156470
-## 2 Korea, Republic of                 12826527
-## 3 China                              10206977
-## 4 Taiwan Province of China            5573244
-## 5 Thailand                            5354219
+##   country            cephalopods_caught
+##   <fct>                           <dbl>
+## 1 China                         4785139
+## 2 Peru                          2274232
+## 3 Korea, Republic of            1535454
+## 4 Japan                         1394041
+## 5 Chile                          723186
 ```
 
 
@@ -613,7 +613,7 @@ fisheries_tidy2 %>%
 ##  8 Notothenia squamifrons             0
 ##  9 Nototheniidae                      0
 ## 10 Nototheniops nudifrons             0
-## # ... with 578 more rows
+## # <U+2026> with 578 more rows
 ```
 
 
