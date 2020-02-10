@@ -29,7 +29,7 @@ msleep
 
 2. Put these data into a new object `sleep`. Make sure they are organized as a data frame.  
 ```{r}
-sleep <- msleep
+sleep <- data.frame(msleep)
 sleep
 ```
 
@@ -52,10 +52,11 @@ summary(sleep)
 ```
 
 
-6. Print out the first column of the data frame and then print out the first row.
+6. Print out the first column of the data frame ##and then print out the first row.
 ```{r}
-sleep[1, ]
+#not a big deal, just putting it in the order he asked for
 sleep[ ,1]
+sleep[1, ]
 ```
 
 
@@ -96,6 +97,8 @@ if (sleep_s>sleep_l) print("Small") else if (sleep_s<sleep_l) print("large") els
 Mega_Sleep <- subset(sleep, sleep_total >= 18, select = c(name, genus, order, sleep_total))
 Mega_Sleep
 ```
+
+
 
 
 ## Push your final code to GitHub
