@@ -83,8 +83,9 @@ filter(homerange, taxon == "snakes") %>%
   arrange(desc(mean.hra.m2)) #Timber rattlensakes are found across the Eastern half of the US. They mostly feed on small mammals
 ```
 
+Using log10.hra you actually get the Namaqua dwarf adder as the smallest snake
+
 ```{r}
-## another option
 #snakes <- 
 #  homerange %>% 
 #  filter(taxon=="snakes") %>% 
