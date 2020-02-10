@@ -47,6 +47,7 @@ names(homerange)
 ```
 ```{r}
 str(homerange)
+#of course glimpse would also give this information
 ```
 ```{r}
 summary(homerange)
@@ -68,9 +69,12 @@ levels(homerange$order)
 
 6. Make a new dataframe `deer` that is limited to the mean mass, log10 mass, family, genus, and species of deer in the database. The family for deer is cervidae. Arrange the data in descending order by log10 mass. Which is the largest deer?  
 ```{r}
+#make a dataframe
+deer <- 
 select(homerange, mean.mass.g, log10.mass, family, genus, species) %>% 
   filter(family == "cervidae") %>% 
   arrange(desc(log10.mass))
+deer
 ```
 
 7. As measured by the data, which snake species has the smallest homerange? Show all of your work, please. Look this species up online and tell me about it!  
@@ -79,12 +83,22 @@ filter(homerange, taxon == "snakes") %>%
   arrange(desc(mean.hra.m2)) #Timber rattlensakes are found across the Eastern half of the US. They mostly feed on small mammals
 ```
 
+```{r}
+## another option
+#snakes <- 
+#  homerange %>% 
+#  filter(taxon=="snakes") %>% 
+#  arrange(log10.hra)
+#snakes
+```
+
 
 8. You suspect that homerange and mass are correlated in birds. We need a ratio that facilitates exploration of this prediction. First, build a new dataframe called `hra_ratio` that is limited to genus, species, mean.mass.g, log10.mass, log10.hra. Arrange it in ascending order by mean mass in grams.  
 ```{r}
 hra_ratio <- filter(homerange, taxon == "birds") %>% 
   select(genus, species, mean.mass.g, log10.mass, log10.hra) %>% 
   arrange(mean.mass.g)
+hra_ratio
 ```
 
 
@@ -95,6 +109,15 @@ hra_ratio <- cbind(hra_ratio, hra.mass.ratio)
 hra_ratio %>% 
   arrange(desc(hra.mass.ratio))
 ```
+```{r}
+#Great! Other code options-
+#hra.mass.ratio <- 
+#  hra_ratio %>% 
+#  mutate(hra.mass.ratio=log10.hra/log10.mass) %>% 
+#  arrange(desc(mean.mass.g))
+#hra.mass.ratio
+```
+
 
 
 10. What is the lowest mass for birds with a `hra.mass.ratio` greater than or equal to 4.0?
