@@ -60,6 +60,8 @@ sum(blackjack, na.rm = TRUE)
 c. What is your interpretation of this result? What do you need to do to address the problem? Recalculate how much you won or lost in blackjack over the week.  
 ```{r}
 sum(blackjack, na.rm = TRUE) #My interpretation is that I won 310 in blackjack over the course of the week. I probably need to go less often as my gambling problem is pretty bad if I'm going 5x a week.
+
+##ha, I love it! You're not wrong.
 ```
 
 d. Calculate how much you won or lost in roulette over the week.  
@@ -78,6 +80,7 @@ print(total_week)
 f. Should you stick to blackjack or roulette? Write a program that verifies this below. 
 ```{r}
 if(sum(blackjack, na.rm = TRUE)>sum(roulette, na.rm = TRUE)) print("Blackjack")  else print("Roulette") #stick to Blackjack
+#pretty tidy, well done!
 ```
 
 ## Push your final code to [GitHub](https://github.com/FRS417-DataScienceBiologists)
