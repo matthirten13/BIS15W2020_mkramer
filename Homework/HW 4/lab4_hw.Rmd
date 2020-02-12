@@ -32,19 +32,31 @@ fisheries
 2. What are the names of the columns? Do you see any potential problems with the column names?
 ```{r}
 colnames(fisheries) #Numbers as column name
+#your code is fine, just another option
+#names(fisheries)
 ```
 
 
 3. What is the structure of the data? Show the classes of each variable.
 ```{r}
 str(fisheries)
+#again, your code is fine, just giving options - glimpse() wil also do this
 ```
 
 
 4. Think about the classes. Will any present problems? Make any changes you think are necessary below.
 ```{r}
 fisheries$Country <- as.factor(fisheries$Country)
+#Other variables you might want to change the class of:
+#fisheries$`ISSCAAP group#` <- as.factor(fisheries$`ISSCAAP group#`)
+#fisheries$`ASFIS species#` <- as.factor(fisheries$`ASFIS species#`)
+#fisheries$`FAO major fishing area` <- as.factor(fisheries$`FAO major fishing area`)
 fisheries
+```
+
+##always a good idea to sanity check
+```{r}
+#glimpse(fisheries)
 ```
 
 
@@ -60,6 +72,8 @@ fisheries %>%
 fisheries %>% 
   count(Country) %>% 
   select(Country)
+#A shorter option-
+#levels(fisheries)
 ```
 
 
@@ -83,6 +97,8 @@ fisheries2 <- fisheries %>%
                 FAO_area = "FAO major fishing area",
                 unit = "Measure")
 fisheries2
+#a more efficient sanity check that doesn't print the whole dataset could be-
+#names(fisheries2)
 ```
 
 8. Are these data tidy? Why or why not, and, how do you know? Use the appropriate pivot function to tidy the data. Remove the NA's. Put the tidy data frame into a new object `fisheries_tidy`.  
@@ -106,6 +122,13 @@ fisheries_tidy2
 
 
 10. Re-check the classes of `fisheries_tidy2`. Notice that "catch" is shown as a character! This is a problem because we will want to treat it as a numeric. How will you deal with this?
+##Re-check classes first
+
+```{r}
+#glimpse(fisheries_tidy2)
+```
+
+
 ```{r}
 fisheries_tidy2$catch <- as.numeric(fisheries_tidy2$catch)
 fisheries_tidy2$year <- as.numeric(fisheries_tidy2$year)
@@ -157,6 +180,7 @@ fisheries_tidy2 %>%
 
 15. Given the top five countries from question 12 above, which species was the highest catch total? The lowest?
 Engraulis ringens was highest, multiple way tie for lowest
+#This questions was asking for species of cephalopod (from question 14) so you would want to do your initial cephalopodsand years filtering again
 ```{r}
 fisheries_tidy2 %>% 
   filter(country == c("Peru", "Japan", "United States of America", "Chile", "Indonesia")) %>% 
@@ -169,10 +193,12 @@ fisheries_tidy2 %>%
 
 
 16. In some cases, the taxonomy of the fish being caught is unclear. Make a new data frame called `coastal_fish` that shows the taxonomic composition of "Miscellaneous coastal fishes" within the ISSCAAP_spgroupname column.
+
+##To show the taxonomic composition we might want to add code which would grou (group_by()) the output by species (AFSIS_sciname). Also we're already working in a dataframe so we don't need to redesginate it as such.
 ```{r}
 coastal_fish <- fisheries_tidy2 %>% 
   filter(ISSCAAP_spgroupname == "Miscellaneous coastal fishes") %>%
-  as.data.frame()
+  #as.data.frame()
 coastal_fish
 ```
 
