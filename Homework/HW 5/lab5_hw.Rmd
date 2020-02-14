@@ -94,18 +94,83 @@ amniota2 %>%
 
 
 **6. Which taxonomic classes are represented in the data? Summarize this in a chart then make a barplot that shows the proportion of observations in each taxonomic class.**
+```{r}
+amniota2 %>% 
+  ggplot(aes(x=class))+
+  geom_bar(stat = "count")
+```
 
 
 **7. Let's explore the taxonomic composition of the data a bit more. How many genera are represented by taxonomic class? Present this as a data table and bar plot.**
+```{r}
+amniota_gen <- amniota2 %>% 
+  group_by(class) %>% 
+  summarize(n_genera = n_unique(genus))
+amniota_gen
+amniota_gen %>% 
+  ggplot(aes(x=class, y=n_genera))+
+  geom_bar(stat="identity")
+```
+
+
 
 
 **8. Lastly, how many species are represented in each taxonomic class? Present this as a data table and bar plot.**
 
+```{r}
+amniota_spec <- amniota2 %>% 
+  group_by(class) %>% 
+  summarize(n_species = n_unique(genus))
+amniota_spec
+amniota_spec %>% 
+  ggplot(aes(x=class, y=n_species))+
+  geom_bar(stat="identity")
+```
+
 
 **9. The `amphibio` data includes information on ecology. Each species is classified as fossorial, terrestrial, aquatic, or arboreal. How many species are in each of these categories? Make a bar plot to visualize these results. Which category is most/ least represented in the data?**
+```{r}
+amphibio %>% 
+  summarize(
+    fossorial = sum(Fos, na.rm=TRUE),
+    terrestial = sum(Ter, na.rm=TRUE),
+    aquatic = sum(Aqu, na.rm=TRUE),
+    arboreal = sum(Arb, na.rm=TRUE)) %>% 
+  pivot_longer(
+    fossorial:arboreal,
+    names_to = "ecology",
+    values_to = "species"
+  ) %>% 
+  ggplot(aes(x=ecology, y=species))+
+  geom_bar(stat = "identity")
+```
 
 
 **10. For the amphibio data, we are interested to know if body size is correlated with litter size? Make a plot that shows this relationship. You should notice that there are outliers. Can you think of a way to identify the outliers for both body size and litter size? What happens when you then re-plot the data?**
+
+```{r}
+amphibio %>% 
+  ggplot(aes(x=Body_size_mm, y=Litter_size_max_n))+
+  geom_point(na.rm=TRUE)
+```
+```{r}
+zone <- function(x, na.rm=T,...){
+  a <- 1.5*IQR(amphibio$Body_size_mm, na.rm=T)
+  b <- quantile(x, probs=c(.25, .75), na.rm = na.rm, ...)
+  c <- c(b[1]-a,b[2]+a)
+  c
+}
+zone(amphibio$Litter_size_max_n)
+zone(amphibio$Body_size_mm)
+```
+```{r}
+amphibio %>% 
+  filter(Litter_size_max_n <= 760.225 & Body_size_mm >= 129.375) %>% 
+  ggplot(aes(x=Body_size_mm, y=Litter_size_max_n))+
+  geom_point(na.rm=TRUE)
+```
+Data is basically just a smaller rectangle of the original
+
 
 
 ## Push your final code to GitHub!
