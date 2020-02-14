@@ -1,7 +1,8 @@
 ---
 title: "Dealing with NA's"
 output:
-  html_document:
+  html_document: 
+    keep_md: yes
     theme: spacelab
     toc: yes
     toc_float: yes
@@ -233,7 +234,7 @@ life_history %>%
 ## Visualizing NAs
 There is another package `visdat` that can be used to visualize the proportion of different classes of data, including missing data.
 ```{r}
-install.packages("visdat")
+#install.packages("visdat")
 library(visdat)
 ```
 

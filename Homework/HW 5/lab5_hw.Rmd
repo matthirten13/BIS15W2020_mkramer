@@ -1,11 +1,11 @@
 ---
 title: "Lab 5 Homework"
-author: "Please Add Your Name Here"
-date: "Please Add the Date Here"
+author: "Matthew Kramer"
+date: "02/14/2020"
 output:
-  html_document:
+  html_document: 
+    keep_md: yes
     theme: spacelab
-    toc: no
 ---
 
 ```{r setup, include=FALSE}
@@ -45,18 +45,52 @@ amphibio <-
 
 ## Questions  
 **1. First, do some exploratory analysis of both data sets. What is the structure, column names, and dimensions?**  
+```{r}
+str(amniota)
+names(amniota)
+dim(amniota)
+```
+
+```{r}
+str(amphibio)
+names(amphibio)
+dim(amphibio)
+```
 
 
 **2. How many total NAs are in each data set? Do these values make sense? Are NAs represented by any other values?**   
+```{r}
+amniota %>% #0 doesn't make sense, looks like it is in as -999
+  summarize(nas_amniota = sum(is.na(amniota)))
+amphibio %>% #The value makes sense, and it looks like there is only NA in the str()
+  summarize(nas_amphi = sum(is.na(amphibio)))
+```
 
 
 **3. Make any necessary replacements in the data such that all NAs appear as "NA".**   
+```{r}
+amniota2 <- amniota %>% 
+  na_if("-999")
+amniota2 %>% 
+  summarize(nas_amni = sum(is.na(amniota2)))
+```
 
 
 **4. Use the package `naniar` to produce a summary, including percentages, of missing data in each column for both data sets.**  
+```{r}
+naniar::miss_var_summary(amniota2)
+naniar::miss_var_summary(amphibio)
+```
 
 
 **5. For the `amniota` data, calculate the number of NAs in the `egg_mass_g` column sorted by taxonomic class; i.e. how many NAs are present in the `egg_mass_g` column in birds, mammals, and reptiles? Does this results make sense biologically? How do these results affect your interpretation of NAs?**  
+It makes sense that there is no data for mammal eggs, as most mammals don't have eggs. It also suggests that NAs are not necessarily "missing" but can simply not exist.
+```{r}
+amniota2 %>% 
+  group_by(class) %>% 
+  select(class, egg_mass_g) %>%
+  naniar::miss_var_summary() 
+```
 
 
 **6. Which taxonomic classes are represented in the data? Summarize this in a chart then make a barplot that shows the proportion of observations in each taxonomic class.**
