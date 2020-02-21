@@ -3,9 +3,9 @@ title: "Lab 6 Homework"
 author: "Please Add Your Name Here"
 date: "Please Add the Date Here"
 output:
-  html_document:
+  html_document: 
+    keep_md: yes
     theme: spacelab
-    toc: no
 ---
 
 ```{r setup, include=FALSE}
@@ -34,27 +34,112 @@ library("gapminder")
 The questions below are open-ended and have many possible solutions. Your approach should, where appropriate, include numerical summaries and visuals. Be creative; assume you are building an analysis that you would ultimately present to an audience of stakeholders. Feel free to try out different `geoms` if they more clearly present your results.  
 
 **1. Use the function(s) of your choice to get an idea of the overall structure of the data frame, including its dimensions, column names, variable classes, etc. As part of this, determine how NAs are treated in the data.**  
+There seems to be no NAs in this data, data was pre-tidied.
+```{r}
+str(gapminder)
+names(gapminder)
+dim(gapminder)
+```
+```{r}
+naniar::miss_var_summary(gapminder)
+gapminder %>% 
+  count(year)
+```
 
 
 **2. Among the interesting variables in gapminder is life expectancy. How has global life expectancy changed between 1952 and 2007?**
+```{r}
+gapminder %>% 
+  group_by(year) %>% 
+  summarize(life_exp = mean(lifeExp)) %>% 
+  ggplot(aes(x = year, y = life_exp))+
+  geom_bar(stat = "identity")+
+  labs(title = "Life Expectancy 1952-2007",
+       x = "Date",
+       y = "Life Expectancy (Years)")+
+  theme(plot.title = element_text(hjust = 0.5))
+```
 
 
 **3. How do the distributions of life expectancy compare for the years 1952 and 2007? _Challenge: Can you put both distributions on a single plot?_**
+```{r}
+gapminder %>% 
+  mutate_at(vars(year), as.factor) %>% 
+  filter(year == "1952" | year ==  "2007") %>% 
+  ggplot(aes(x=year, y=lifeExp, group = year))+
+  geom_boxplot()+
+  labs(title = "Distribution of Life Expectancy in 1952 & 2007",
+       x = "Date",
+       y = "Life Expectancy")+
+  theme(plot.title = element_text(hjust = 0.5))
+```
 
 
 **4. Your answer above doesn't tell the whole story since life expectancy varies by region. Make a summary that shows the min, mean, and max life expectancy by continent for all years represented in the data.**
+```{r}
+gapminder %>% 
+  group_by(continent) %>% 
+  summarize(min_LE = min(lifeExp),
+            mean_LE = mean(lifeExp),
+            max_LE = max(lifeExp))
+```
 
 
 **5. How has life expectancy changed between 1952-2007 for each continent? Try using `geom_line()` for this, including all continents on the same  plot.**
+```{r}
+gapminder %>% 
+  group_by(continent, year) %>% 
+  summarize(mean_LE = mean(lifeExp)) %>% 
+  ggplot(aes(x=year, y=mean_LE, group = continent, color = continent))+
+  geom_line()+
+  labs(group = "Continent",
+       title = "Life Expectancies 1952-2007",
+       y = "Life Expectancy (Years)",
+       x = NULL)+
+  theme(plot.title = element_text(hjust = 0.5))
+```
 
 
 **6. We are interested in the relationship between per capita GDP and life expectancy; i.e. does having more money help you live longer?**
+```{r}
+gapminder %>% 
+  ggplot(aes(x=gdpPercap, y=lifeExp))+
+  geom_point()+
+  labs(title = "Per Capita GDP & Life Expectancy",
+       x = "Life Expectancy (Years)",
+       y = "GDP per capita")+
+  theme(plot.title = element_text(hjust = 0.5))
+```
 
 
 **7. There is extreme disparity in per capita GDP. Rescale the x axis to make this easier to interpret. How would you characterize the relationship?**
 
+```{r}
+gapminder %>% 
+  ggplot(aes(x=gdpPercap, y=lifeExp))+
+  geom_point()+
+  labs(title = "Per Capita GDP & Life Expectancy",
+       x = "GDP per capita",
+       y = "Life Expectancy (Years)")+
+  scale_x_log10()+
+  theme(plot.title = element_text(hjust = 0.5))
+```
+
 
 **8. Which countries have had the largest population growth since 1952?**
+```{r}
+gapminder2 <-gapminder %>% 
+  select(country, year, pop) %>% 
+  filter(year == "1952" | year == "2007") %>% 
+  pivot_wider(names_from = year,
+              values_from = pop) %>% 
+  `colnames<-`(c("country", "start", "final"))
+  gapminder2$pop_growth <- gapminder2$final - gapminder2$start
+  gapminder2 %>% 
+    arrange(desc(pop_growth)) %>% 
+    top_n(5) %>% 
+    select(country, pop_growth)
+```
 
 
 **9. Use your results from the question above to plot population growth for the top five countries since 1952.**
