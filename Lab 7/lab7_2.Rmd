@@ -21,6 +21,9 @@ knitr::opts_chunk$set(
 library("tidyverse")
 library("shiny")
 library("naniar")
+
+#install.packages("shinydashboard")
+library("shinydashboard")
 ```
 
 ## Learning Goals
@@ -242,7 +245,41 @@ gabon <- readr::read_csv("data/IvindoData_DryadVersion.csv")
 ```
 
 2. Build an app that re-creates the plots shown on page 810 of this paper. It compares the relative abundance % to the distance from villages in rural Gabon. Use shiny dashboard and add aesthetics to the plot.  
+```{r}
+glimpse(gabon)
+```
 
+```{r}
+ui <- dashboardPage(
+  dashboardHeader(title = "Relative Abundance by Taxonomic Guilds"),
+  dashboardSidebar(),
+  dashboardBody(
+  fluidRow(
+  box(title = "Plot Options", width = 3,
+  selectInput("z", "Select Taxonomic Group", choices = c("RA_Birds", "RA_Monkeys", "RA_Apes", "RA_Elephant", "RA_Ungulate", "RA_Rodent"), 
+              selected = "RA_Bird"),
+  ), # close the first box
+  box(title = "Plot of RA Data", width = 7,
+  plotOutput("plot", width = "600px", height = "400px")
+  ) # close the second box
+  ) # close the row
+  ) # close the dashboard body
+) # close the ui
+
+server <- function(input, output, session) { 
+  
+  # the code to make the plot of iris data grouped by species
+  output$plot <- renderPlot({
+    ggplot(gabon, aes_string(x = "Distance", y = input$z)) + geom_point(size=5) + theme_light(base_size = 18)+geom_smooth(method=lm, se=T)
+  })
+  
+  # stop the app when we close it
+  session$onSessionEnded(stopApp)
+
+  }
+
+shinyApp(ui, server)
+```
 
 ## That's it, let's take a break!   
 
