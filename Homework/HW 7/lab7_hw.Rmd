@@ -20,6 +20,7 @@ Answer the following questions and complete the exercises in RMarkdown. Please e
 library(tidyverse)
 library(shiny)
 library(shinydashboard)
+library(naniar)
 ```
 
 ## Data
@@ -29,9 +30,41 @@ UC_admit <- readr::read_csv("data/UC_admit.csv")
 ```
 
 **1. Use the function(s) of your choice to get an idea of the overall structure of the data frame, including its dimensions, column names, variable classes, etc. As part of this, determine if there are NA's and how they are treated.**  
+```{r}
+dim(UC_admit)
+glimpse(UC_admit)
+naniar::miss_var_summary(UC_admit)
+```
+```{r}
+UC_admit <- UC_admit %>% 
+  rename("Perc_Fr" = "Perc FR") %>% 
+  mutate(Campus = as.factor(Campus),
+         Academic_Yr = as.integer(Academic_Yr),
+         Category = as.factor(Category),
+         Ethnicity = as.factor(Ethnicity),
+         Perc_Fr = as.numeric(gsub("[\\%,]", "", Perc_Fr)),
+         FilteredCountFR = as.integer(FilteredCountFR)
+  )
+```
+
+
+
 
 
 **2. The president of UC has asked you to build a shiny app that shows admissions by ethnicity across all UC campuses. Your app should allow users to explore year, campus, and admit category as interactive variables. Use shiny dashboard and try to incorporate the aesthetics you have learned in ggplot to make the app neat and clean.**
+```{r}
+library(shiny)
+
+ui <- fluidPage(
+  
+)
+
+server <- function(input, output, session) {
+  
+}
+
+shinyApp(ui, server)
+```
 
 
 **3. Make alternate version of your app above by tracking enrollment at a campus over all of the represented years while allowing users to interact with campus, category, and ethnicity.**
