@@ -103,7 +103,9 @@ ui <- fluidPage(
       hr(),
       helpText("Reference: University of California Information Center")
     ),
-  plotOutput("plot", width = "600px", height = "400px")
+     mainPanel(
+       plotOutput("plot", width = "600px", height = "400px")
+     )
 )
 
 server <- function(input, output, session) {
