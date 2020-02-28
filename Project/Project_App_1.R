@@ -24,7 +24,7 @@ goose <- goose %>%
 goose_mean <- goose %>% 
   group_by(Common_Name, Sex) %>% 
   summarize(Wing_Chord_mm = mean(Wing_Chord, na.rm=T),
-            Bird__Weight_g = mean(Bird_Weight, na.rm=T),
+            Bird_Weight_g = mean(Bird_Weight, na.rm=T),
             Tarsus_Length_mm = mean(Tarsus_Length, na.rm=T),
             Culmen_Length_mm = mean(Culmen_Length, na.rm=T),
             Bill_Width_mm = mean(Bill_Width, na.rm=T),
