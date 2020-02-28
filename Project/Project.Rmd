@@ -4,6 +4,12 @@ output:
   html_document: 
     keep_md: yes
 ---
+```{r}
+library(tidyverse)
+library(naniar)
+library(shiny)
+library(shinydashboard)
+```
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -14,4 +20,20 @@ options(scipen=999)
 ```{r}
 goose <- readr::read_csv("data/Goose_data_2019.csv")
 ```
+```{r}
+dim(goose)
+glimpse(goose)
+```
+```{r}
+goose %>% 
+naniar::miss_var_summary()
+```
+```{r}
+names(goose)<-gsub("\\s","_",names(goose))#Put_in names
+```
+```{r}
+goose %>% 
+  mutate
+```
+
 
