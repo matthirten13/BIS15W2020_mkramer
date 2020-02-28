@@ -49,45 +49,36 @@ goose_mean <- goose %>%
             Tarsus__Length = mean(Tarsus_Length, na.rm=T),
             Culmen__Length = mean(Culmen_Length, na.rm=T),
             Bill__Width = mean(Bill_Width, na.rm=T),
-            Bill__Height = mean(Bill_Height, na.rm=T))
+            Bill__Height = mean(Bill_Height, na.rm=T)) %>% 
+  pivot_longer(Wing__Chord:Bill__Height,
+               names_to = "Measure",
+               values_to = "Value")
 goose_mean
 ```
 
 ```{r message=FALSE, warning=FALSE}
 ui <- fluidPage(    
   
-  titlePanel("Goose Data by Sex"), # give the page a title
-  
-  # generate a row with a sidebar
+  titlePanel("Goose Data by Sex"), 
   sidebarLayout(      
-    
-    # define the sidebar with one input
     sidebarPanel(
       selectInput("Common_Name", "Select a Goose Species:", 
                   choices=unique(goose_mean$Common_Name)),
-      selectInput("Measure", "Select a Measurement", choices = c("Wing__Chord", "Bird__Weight", "Tarsus__Length", "Culmen__Length", "Bill__Width", "Bill__Height"), 
-              selected = "Wing_Chord"),
+      selectInput("Measure", "Select a Measurement",
+                  choices = unique(goose_mean$Measure)),
       hr(),
       helpText("Credit: Goose data collected by A. Mott")
     ),
-    
-    # create a spot for the barplot
     mainPanel(
       plotOutput("goosePlot")  
     )
-    
   )
 )
-
-# define a server for the Shiny app
 server <- function(input, output, session) {
-  
-  # fill in the spot we created for a plot
   output$goosePlot <- renderPlot({
-    
     goose_mean %>% 
-    filter(Common_Name == input$Common_Name) %>% 
-    ggplot(aes(x=Sex, y=input$Measure)) + 
+    filter(Common_Name == input$Common_Name & Measure == input$Measure) %>% 
+    ggplot(aes(x=Sex, y=Value)) + 
     geom_bar(stat = "identity", fill="red2")
   })
 }
