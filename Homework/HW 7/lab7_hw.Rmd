@@ -127,7 +127,9 @@ server <- function(input, output, session) {
     UC_admit %>%
     filter(Campus == input$Campus & Ethnicity == input$Ethnicity & Category == input$Category) %>% 
     ggplot(aes(x=Academic_Yr, y=FilteredCountFR)) + 
-    geom_bar(stat = "identity", color="black", fill="steelblue", alpha=0.6)
+    geom_bar(stat = "identity", color="black", fill="green2")+
+    labs(x="Year",
+         y=NULL)
   })
 }
 
