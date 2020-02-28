@@ -30,10 +30,69 @@ naniar::miss_var_summary()
 ```
 ```{r}
 names(goose)<-gsub("\\s","_",names(goose))#Put_in names
+names(goose)<-gsub("#","Number",names(goose))
 ```
 ```{r}
-goose %>% 
-  mutate
+goose <- goose %>% 
+  mutate_at(vars(Band_Number,Species,Common_Name,Age,Sex,Bander_ID,Location,How_Captured,Transmitter_Affixed,Cloacal_Swab,Blood_Sample_Taken, Transmitter_ID,Aux_Marker_Type,Season), as.factor)
+```
+```{r}
+goose <- goose %>% 
+  mutate_at(vars(Wing_Chord, Bird_Weight, Tarsus_Length, Culmen_Length, Bill_Width, Bill_Height), as.numeric)
+```
+
+```{r}
+goose_mean <- goose %>% 
+  group_by(Common_Name, Sex) %>% 
+  summarize(Wing__Chord = mean(Wing_Chord, na.rm=T),
+            Bird__Weight = mean(Bird_Weight, na.rm=T),
+            Tarsus__Length = mean(Tarsus_Length, na.rm=T),
+            Culmen__Length = mean(Culmen_Length, na.rm=T),
+            Bill__Width = mean(Bill_Width, na.rm=T),
+            Bill__Height = mean(Bill_Height, na.rm=T))
+goose_mean
+```
+
+```{r message=FALSE, warning=FALSE}
+ui <- fluidPage(    
+  
+  titlePanel("Goose Data by Sex"), # give the page a title
+  
+  # generate a row with a sidebar
+  sidebarLayout(      
+    
+    # define the sidebar with one input
+    sidebarPanel(
+      selectInput("Common_Name", "Select a Goose Species:", 
+                  choices=unique(goose_mean$Common_Name)),
+      selectInput("Measure", "Select a Measurement", choices = c("Wing__Chord", "Bird__Weight", "Tarsus__Length", "Culmen__Length", "Bill__Width", "Bill__Height"), 
+              selected = "Wing_Chord"),
+      hr(),
+      helpText("Credit: Goose data collected by A. Mott")
+    ),
+    
+    # create a spot for the barplot
+    mainPanel(
+      plotOutput("goosePlot")  
+    )
+    
+  )
+)
+
+# define a server for the Shiny app
+server <- function(input, output, session) {
+  
+  # fill in the spot we created for a plot
+  output$goosePlot <- renderPlot({
+    
+    goose_mean %>% 
+    filter(Common_Name == input$Common_Name) %>% 
+    ggplot(aes(x=Sex, y=input$Measure)) + 
+    geom_bar(stat = "identity", fill="red2")
+  })
+}
+
+shinyApp(ui, server)
 ```
 
 
