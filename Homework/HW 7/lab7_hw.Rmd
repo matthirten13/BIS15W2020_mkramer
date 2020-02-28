@@ -10,6 +10,7 @@ output:
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+options(scipen=999)
 ```
 
 ## Instructions
@@ -39,7 +40,7 @@ naniar::miss_var_summary(UC_admit)
 UC_admit <- UC_admit %>% 
   rename("Perc_Fr" = "Perc FR") %>% 
   mutate(Campus = as.factor(Campus),
-         Academic_Yr = as.integer(Academic_Yr),
+         Academic_Yr = as.factor(Academic_Yr),
          Category = as.factor(Category),
          Ethnicity = as.factor(Ethnicity),
          Perc_Fr = as.numeric(gsub("[\\%,]", "", Perc_Fr)),
@@ -53,14 +54,29 @@ UC_admit <- UC_admit %>%
 
 **2. The president of UC has asked you to build a shiny app that shows admissions by ethnicity across all UC campuses. Your app should allow users to explore year, campus, and admit category as interactive variables. Use shiny dashboard and try to incorporate the aesthetics you have learned in ggplot to make the app neat and clean.**
 ```{r}
+UC_admit2 <- UC_admit %>% 
+  filter(Ethnicity != "All")
+```
+
+```{r}
 library(shiny)
 
 ui <- fluidPage(
+  titlePanel("UC Campus Admissions by Percent"),
+      selectInput("x", "Select X Variable", choices = c("Campus", "Academic_Yr", "Category"), 
+              selected = "Campus"),
+  plotOutput("plot", width = "800px", height = "500px")
   
 )
 
 server <- function(input, output, session) {
-  
+  session$onSessionEnded(stopApp)
+  output$plot <- renderPlot({
+    ggplot(UC_admit2, aes_string(x = input$x, y = UC_admit2$Perc_Fr, fill = UC_admit2$Ethnicity))+
+      geom_bar(stat = "identity", position = "dodge")+
+      labs(x = input$x,
+           y = "Percent")
+  })
 }
 
 shinyApp(ui, server)
@@ -68,6 +84,42 @@ shinyApp(ui, server)
 
 
 **3. Make alternate version of your app above by tracking enrollment at a campus over all of the represented years while allowing users to interact with campus, category, and ethnicity.**
+```{r}
+UC_admit$Academic_Yr <- as.factor(UC_admit$Academic_Yr)
+```
+
+```{r}
+library(shiny)
+
+ui <- fluidPage(
+  titlePanel("UC Campus Admissions 2010-2019"),
+  sidebarPanel(
+      selectInput("x", "Filter by Campus:", 
+                  choices=unique(UC_admit$Campus)),
+      selectInput("y", "Filter by Ethnicity:", 
+                  choices=unique(UC_admit$Ethnicity)),
+      selectInput("z", "Filter by Admit Category:", 
+                  choices=unique(UC_admit$Category)),
+      hr(),
+      helpText("Reference: University of California Information Center")
+    ),
+  plotOutput("plot", width = "600px", height = "400px")
+)
+
+server <- function(input, output, session) {
+  session$onSessionEnded(stopApp)
+  UC_filt <- reactive({
+  UC_admit %>% filter(Campus == input$x & Ethnicity == input$y & Category == input$z)
+  })
+  output$plot <- renderPlot({
+    UC_fin <- UC_filt()
+    ggplot(UC_fin, aes_string(x = UC_fin$Academic_Yr, y = UC_fin$FilteredCountFR))+
+      geom_bar(stat = "identity")
+  })
+  }
+
+shinyApp(ui, server)
+```
 
 
 ## Push your final code to GitHub!
