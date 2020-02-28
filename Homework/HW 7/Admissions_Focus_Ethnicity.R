@@ -1,7 +1,11 @@
-library(tidyverse)
-library(shiny)
-library(shinydashboard)
-library(naniar)
+if (!require("tidyverse")) install.packages('tidyverse')
+library("tidyverse")
+if (!require("shiny")) install.packages('shiny')
+library("shiny")
+if (!require("shinydashboard")) install.packages('shinydashboard')
+library("shinydashboard")
+if (!require("naniar")) install.packages('naniar')
+library("naniar")
 
 options(scipen=999)
 
