@@ -2,7 +2,8 @@
 title: "Intro to GenBank and BLAST"
 date: "`r Sys.Date()`"
 output:
-  html_document:
+  html_document: 
+    keep_md: yes
     theme: spacelab
     toc: yes
     toc_float: yes
@@ -168,17 +169,18 @@ Open this file in your text editor and have a look. You have downnloaded and for
 
 1. Create your own search of the NCBI nucleotide database using `entrez_search()` for RAG1 sequences of _Ornithorhynchus anatinus_. Limit your returned hits to 10. What is _Ornithorhynchus anatinus_?
 ```{r}
-
+dalmatian_search <- entrez_search(db="nuccore", term= "Canis lupus familiaris[Organism] AND Dalmatian", retmax=10)
 ```
 
 2. Use `entrez_fetch()` to return your database hits as a character vector.
 ```{r}
-
+dalmatian_seqs <-entrez_fetch(db="nuccore", id=dalmatian_search$ids, rettype="fasta")
+dalmatian_seqs
 ```
 
 3. Now store your own pulled sequence data as a .fasta file using the `write()` function. Remember those line endings!
 ```{r}
-
+write(dalmatian_seqs, "data/dalmatian_sequences.fasta", sep = "/n")
 ```
 
 ## That's it, let's take a break!   

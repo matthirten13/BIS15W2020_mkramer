@@ -68,22 +68,29 @@ GC(dengueseq)
 ##Practice
 1. Using one of the lizard accession numbers from the first half of class, pull that sequence on it's own from GenBank, store it as a .fasta file, and read it into R. Then pull the sequence out of the R list using double square brackets.
 ```{r}
-
+lizseq <- read.GenBank("AY662598", as.character = T)
+```
+```{r}
+write.fasta(names="LIZ-1", sequences=lizseq, file.out="data/liz1.fasta")
+lizard <- read.fasta(file = "data/liz1.fasta")
+```
+```{r}
+lizseq <- lizard[[1]]
 ```
 
 2. What is the length of this sequence?
 ```{r}
-
+length(lizseq)
 ```
 
 3. Generate a table showing the nucleotide base composition of your chosen sequence.
 ```{r}
-
+table(lizseq)
 ```
 
 4. What is the GC content of the sequence you've chosen?
 ```{r}
-
+GC(liz)
 ```
 
 
