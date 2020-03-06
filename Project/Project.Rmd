@@ -37,6 +37,16 @@ goose <- goose %>%
   mutate_at(vars(Band_Number,Species,Common_Name,Age,Sex,Bander_ID,Location,How_Captured,Transmitter_Affixed,Cloacal_Swab,Blood_Sample_Taken, Transmitter_ID,Aux_Marker_Type,Season), as.factor)
 ```
 ```{r}
+goose %>% 
+  rename(Wing_Chord_mm = Wing_Chord,
+         Bird_Weight_g = Bird_Weight,
+         Tarsus_Length_mm = Tarsus_Length,
+         Culmen_Length_mm = Culmen_Length,
+         Bill_Width_mm = Bill_Width,
+         Bill_Height_mm = Bill_Height)
+```
+
+```{r}
 goose <- goose %>% 
   mutate_at(vars(Wing_Chord, Bird_Weight, Tarsus_Length, Culmen_Length, Bill_Width, Bill_Height), as.numeric)
 ```
