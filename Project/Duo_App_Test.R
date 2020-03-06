@@ -75,7 +75,7 @@ server <- function(input, output, session) {
            y=input$Measure)
     else
       goose_all %>% 
-        filter(Common_Name == input$Common_Name & Measure == input$Measure) %>% 
+        filter(Common_Name == input$Common_Name & Measure == input$Measure) %>%
       ggplot(aes(x=Sex, y=Value, fill = Sex))+
       geom_boxplot()+
       labs(x="Sex",
