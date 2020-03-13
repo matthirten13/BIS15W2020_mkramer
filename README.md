@@ -1,8 +1,6 @@
 # BIS15W2020_mkramer
 # Matthew Kramer
 
-# This is my work for BIS 15L.
-
 ## Repository Info
 My repository for BIS 15 @UC Davis during Winter 2020
 
